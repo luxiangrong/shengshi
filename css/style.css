@@ -97,58 +97,60 @@ body {
 }
 
 /*============= screen 3 =================*/
-.case-list ul, .case-list ul li {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+.case-grid {
+	overflow: visible !important;
 }
 
-.case-list ul{
-	overflow-x: hidden;
-    width: 2000px; 
+.case-list {
+	max-height: 240px;
 }
 
-
-.case-list li {
-	float: left;
+.case-list .case-item {
 	position: relative;
+	max-width: 360px;
+	height: 240px;
 }
 
 
-.case-list .case-info {
+.case-list .case-intro {
 	font-size: 14px;
-	white-space: normal;
-	
 	color: #a8a8a8;
 	text-align: center;
-}
-
-.case-list .case-info .case-pic, .case-list .case-info .case-intro {
-	position: absolute;
-}
-
-.case-list .case-info .case-intro {
 	opacity: 0;
 }
 
-.case-list li .case-intro {
+.case-list  .case-pic, .case-list .case-intro{
+	position: absolute;
+}
+
+.case-list  .case-pic {
+	left: 0;
+	top: 0;
+}
+
+.case-list  .case-intro {
+	left: 0;
+	top: 0;
+}
+
+.case-list .case-item .case-intro {
 	background-color: #1d1d1d;
-	width: 360px;
+	max-width: 360px;
 	padding: 30px 40px;
 }
 
-.case-list li .case-intro h3 {
+.case-list .case-item .case-intro h3 {
 	color: #FFF;
 	font-size: 1.5em;
 	font-weight: bold;
 	text-align: center;
 }
 
-.case-list li .case-intro img {
+.case-list .case-item  .case-intro img {
 	margin-top: -75px;
 }
 
-.case-list li .case-intro p {
+.case-list .case-item .case-intro p {
 	text-align: center;
 }
  
