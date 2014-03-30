@@ -1,3 +1,6 @@
+/**
+ * normal 
+ */
 body {
 	background-color: #181818;
 }
@@ -13,12 +16,18 @@ body {
 
 @media (min-width: 1200px) {
 .container {
-    width: 1440px;
 }
 }
 
-.section-1 {
+.section-1, .section-2, .section-3 {
 	background-color: #e4e5e7;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+
+/*============ screen 1 ===============*/
+#particals_wrapper img {
+	position:  fixed;
 }
 
 .screen-1-wrap {
@@ -28,6 +37,8 @@ body {
 	background-attachment:fixed;
 }
 
+
+/*============ screen 2===============*/
 .circle-btn,.circle-btn-reflect {
 	-webkit-border-radius: 85px 85px 85px 85px;
 	border-radius: 85px 85px 85px 85px;
@@ -36,6 +47,10 @@ body {
 	width: 170px;
 	height: 170px;
 	cursor: pointer;
+}
+
+.circle-btn-reflect {
+	height: 70px;
 }
 
 .circle-btn-reflect {
@@ -81,10 +96,66 @@ body {
 	color: #FFF;
 }
 
-#particals_wrapper img {
-	position:  fixed;
+/*============= screen 3 =================*/
+.case-list ul, .case-list ul li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
+.case-list ul{
+	overflow-x: hidden;
+    width: 2000px; 
+}
+
+
+.case-list li {
+	float: left;
+	position: relative;
+}
+
+
+.case-list .case-info {
+	font-size: 14px;
+	white-space: normal;
+	
+	color: #a8a8a8;
+	text-align: center;
+}
+
+.case-list .case-info .case-pic, .case-list .case-info .case-intro {
+	position: absolute;
+}
+
+.case-list .case-info .case-intro {
+	opacity: 0;
+}
+
+.case-list li .case-intro {
+	background-color: #1d1d1d;
+	width: 360px;
+	padding: 30px 40px;
+}
+
+.case-list li .case-intro h3 {
+	color: #FFF;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.case-list li .case-intro img {
+	margin-top: -75px;
+}
+
+.case-list li .case-intro p {
+	text-align: center;
+}
+ 
+
+/*
+ * footer
+ */
 .footer {
 	padding-top: 20px;
 }
