@@ -2,6 +2,14 @@ jQuery.noConflict();
 (function($) {
 	$(function() {
 		$(document).ready(function() {
+			$(".box").hover(function() {
+				$this = $(this);
+				var top = $this.find('.top');
+				$this.addClass('openBox');
+			}, function() {
+				var top = $this.find('.top');
+				$this.removeClass('openBox');
+			});
 
 			//$('.case-list').scrollPlay();
 			$(".case-list .case-item").hover(function() {

@@ -1,5 +1,5 @@
 /**
- * normal 
+ * normal
  */
 body {
 	background-color: #181818;
@@ -15,11 +15,11 @@ body {
 }
 
 @media (min-width: 1200px) {
-.container {
-}
+	.container {
+	}
 }
 
-.section-1, .section-2, .section-3 {
+.section-1, .section-2, .section-3, .section-4 {
 	background-color: #e4e5e7;
 	overflow-x: hidden;
 	padding-top: 20px;
@@ -27,19 +27,18 @@ body {
 
 /*============ screen 1 ===============*/
 #particals_wrapper img {
-	position:  fixed;
+	position: fixed;
 }
 
 .screen-1-wrap {
 	margin-top: 30px;
 	text-align: center;
 	background: url(../images/s1.png) no-repeat center 100px;
-	background-attachment:fixed;
+	background-attachment: fixed;
 }
 
-
 /*============ screen 2===============*/
-.circle-btn,.circle-btn-reflect {
+.circle-btn, .circle-btn-reflect {
 	-webkit-border-radius: 85px 85px 85px 85px;
 	border-radius: 85px 85px 85px 85px;
 	border: 1px solid #bdbdbd;
@@ -58,8 +57,7 @@ body {
 	border-width: 0;
 }
 
-.circle-btn:hover + .circle-btn-reflect,
-.circle-btn.active + .circle-btn-reflect   {
+.circle-btn:hover + .circle-btn-reflect, .circle-btn.active + .circle-btn-reflect {
 	background-image: url(../img/circle-btn-reflect-active_bg.png) center top no-repeat;
 	border-width: 0;
 }
@@ -68,7 +66,7 @@ body {
 	font-size: 4em;
 }
 
-.circle-btn  p{
+.circle-btn  p {
 	font-size: 1.5em;
 }
 
@@ -76,23 +74,13 @@ body {
 	color: #e60012;
 }
 
-.circle-btn:hover,
-.circle-btn:focus,
-.circle-btn:active,
-.circle-btn.active {
+.circle-btn:hover, .circle-btn:focus, .circle-btn:active, .circle-btn.active {
 	background-color: #e60012;
 	border-color: #e60012;
 	color: #FFF;
 }
 
-.circle-btn:hover h1, 
-.circle-btn:hover p strong,
-.circle-btn:focus h1,
-.circle-btn:focus p strong,
-.circle-btn:active h1,
-.circle-btn:active p strong,
-.circle-btn.active h1,
-.circle-btn.active p strong {
+.circle-btn:hover h1, .circle-btn:hover p strong, .circle-btn:focus h1, .circle-btn:focus p strong, .circle-btn:active h1, .circle-btn:active p strong, .circle-btn.active h1, .circle-btn.active p strong {
 	color: #FFF;
 }
 
@@ -111,7 +99,6 @@ body {
 	height: 240px;
 }
 
-
 .case-list .case-intro {
 	font-size: 14px;
 	color: #a8a8a8;
@@ -119,7 +106,7 @@ body {
 	opacity: 0;
 }
 
-.case-list  .case-pic, .case-list .case-intro{
+.case-list  .case-pic, .case-list .case-intro {
 	position: absolute;
 }
 
@@ -153,7 +140,152 @@ body {
 .case-list .case-item .case-intro p {
 	text-align: center;
 }
- 
+
+/*=================== screen 4 ===================*/
+.section-4 {
+	overflow-x: hidden;
+	overflow-y:visible;
+	height: 800px;
+}
+
+.stage_area {
+	width: 1000px;
+	min-height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #f0f0f0;
+	-webkit-perspective: 900px;
+	-moz-perspective: 900px;
+	perspective: 800px;
+	perspective-origin: 50% 20%;
+	position: relative;
+	background: url(../img/computer.png) center bottom no-repeat;
+}
+
+.stage_area  .box-container {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	position: relative;
+	transform: rotateX(90deg) translate3d(0, 0, 50px);
+}
+
+.box-container .surface {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	background-color: #DDD;
+	transform: translate3d(0,0,-400px);
+}
+
+.box-container .box:hover .bottom {
+	background-color: #d4d4d4;
+}
+
+.box-container .top {
+	transform: translate3d(0,0,-400);
+	background-color: #dd0313;
+	opacity: 0;
+	transition: all 0.5s linear 0s;
+	background: url(../img/top_face.png) center center no-repeat;
+}
+.box-container .front {
+	width: 200px;
+	height: 100px;
+	transform: rotateX(-90deg) translate3d(0px, 350px, 150px);
+	opacity: 0;
+	transition: all 0.5s linear 0s;
+	display: none;
+}
+.box-container .right {
+	width: 200px;
+	height: 100px;
+	transform: rotateX(90deg) rotateY(-90deg) translate3d(-50px, -350px, -100px);
+	opacity: 0;
+	display: none;
+}
+.box-container .left {
+	width: 200px;
+	height: 100px;
+	transform: rotateX(90deg) rotateY(-90deg) translate3d(-50px, -350px, 100px);
+	opacity: 0;
+	display: none;
+}
+
+.box-container .things {
+	transform: translate3d(0px, 0px, -400px) rotateY(0) rotateZ(0) scale(0.1);
+	opacity: 0;
+	max-width: 200px;
+	max-height: 200px;
+}
+
+.box-container .openBox .top {
+	transform: translate3d(0,0,-300px);
+	opacity: 1;
+	display: block;
+}
+
+.box-container .openBox .things {
+	opacity: 1;
+	max-width: 200px;
+	max-height: 200px;
+}
+
+.box-container .openBox .thing1 {
+	transform: translate3d(-30px, -20px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-45deg) scale(0.4);
+}
+
+.box-container .openBox .thing2 {
+	transform: translate3d(0px, 0px, -240px) rotateY(0deg) rotateZ(0deg) rotateX(-45deg) scale(0.4);
+}
+
+.box-container .openBox .thing3 {
+	transform: translate3d(30px, 20px, -230px) rotateY(0deg) rotateZ(0deg) rotateX(-45deg) scale(0.4);
+}
+
+.box-container .openBox .front,.box-container .openBox .left,.box-container .openBox .right {
+	opacity: 0.2;
+	display: block;
+	background-color: #AAA;
+}
+
+.box-container .openBox .left {
+	opacity: 0.3;
+}
+
+.box-container .openBox .right {
+	opacity: 0.4;
+}
+
+.box-container .openBox .bottom {
+	background-color: #555555;
+}
+
+.box-container .box-label {
+	transform: rotateX(-90deg) translate3d(50px, 355px, 0px);
+	-webkit-border-radius: 70px 70px 70px 70px;
+	border-radius: 70px 70px 70px 70px;
+	border: 1px solid #bdbdbd;
+	background-color: #FFF;
+	width: 120px;
+	height: 120px;
+	cursor: pointer;
+	opacity: 1;
+	display: block;
+	transition: all 0.5s linear 0s;
+	color: #dd0313;
+	text-align: center;
+}
+
+.box-container .box-label  p {
+	margin-top: 20px;
+}
+
+.box-container .openBox .box-label {
+	transform: rotateX(-90deg) translate3d(50px, 160px, 0px);
+	opacity: 1;
+	background-color: #FFF;
+}
 
 /*
  * footer
@@ -167,7 +299,7 @@ body {
 	margin-right: 20px;
 }
 
-.site-map .list-group-item{
+.site-map .list-group-item {
 	background-color: transparent;
 	border: 0px solid #FFF;
 	padding: 0;
@@ -180,11 +312,7 @@ body {
 	font-weight: bold;
 }
 
-.site-map a.active,
-.site-map a:hover,
-.site-map a:focus,
-.site-map a:active,
-.site-map a.list-group-item.active{
+.site-map a.active, .site-map a:hover, .site-map a:focus, .site-map a:active, .site-map a.list-group-item.active {
 	background-color: transparent;
 	background-image: none;
 	color: #ff1100;
