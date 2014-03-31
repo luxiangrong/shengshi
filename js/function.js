@@ -2,6 +2,7 @@ jQuery.noConflict();
 (function($) {
 	$(function() {
 		$(document).ready(function() {
+
 			$(".box").hover(function() {
 				$this = $(this);
 				var top = $this.find('.top');
@@ -15,7 +16,7 @@ jQuery.noConflict();
 			$(".case-list .case-item").hover(function() {
 				$this = $(this);
 				var offset = $this.offset();
-				var height = $this.height() -20;
+				var height = $this.height() - 20;
 				// $this.find('.case-pic').css('visibility','hidden');
 				var caseInfoPicElem = $this.find('.case-pic');
 				var caseIntroElem = $this.find('.case-intro');
@@ -92,4 +93,4 @@ jQuery.noConflict();
 			});
 		});
 	});
-})(jQuery); 
+})(jQuery);

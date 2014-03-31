@@ -93,13 +93,28 @@
 
 		setBackgroundPosition = (supportsBackgroundPositionXY ?
 			function($elem, x, y) {
-				$elem.css({
+				// $elem.css({
+					// 'background-position-x': x,
+					// 'background-position-y': y
+				// });
+				$elem.stop().animate({
 					'background-position-x': x,
 					'background-position-y': y
+				}, {
+					queue : false,
+					duration : 500,
+					"easing" : "easeOutCubic"
 				});
 			} :
 			function($elem, x, y) {
-				$elem.css('background-position', x + ' ' + y);
+				//$elem.css('background-position', x + ' ' + y);
+				$elem.stop().animate({
+					backgroundPosition: "(" + x + " " + y +")"
+				}, {
+					queue : false,
+					duration : 500,
+					"easing" : "easeOutCubic"
+				});
 			}
 		),
 

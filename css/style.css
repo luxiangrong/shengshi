@@ -16,6 +16,7 @@ body {
 
 @media (min-width: 1200px) {
 	.container {
+		width: 1280px;
 	}
 }
 
@@ -95,8 +96,8 @@ body {
 
 .case-list .case-item {
 	position: relative;
-	max-width: 360px;
-	height: 240px;
+	max-width: 320px;
+	height: 213px;
 }
 
 .case-list .case-intro {
@@ -317,6 +318,44 @@ body {
 	transform: rotateX(-90deg) translate3d(50px, 160px, 0px);
 	opacity: 1;
 	background-color: #FFF;
+}
+
+/*============= screen events ==============*/
+#events {
+	background-color: #FFF;
+}
+
+#events .scroll-1 {
+	background: url(../img/events/events_bg_1.png) 50% 0 no-repeat fixed;
+}
+
+#events .scroll-2 {
+	background: url(../img/events/events_bg_2.png) 50% 0 no-repeat fixed;
+}
+
+#events .events-body {
+	position: relative;
+	background: url(../img/events.png) center top no-repeat;
+	height: 1648px;
+}
+
+#events .events-body .mask{
+	background: url(../img/events_mask.png) center top no-repeat;
+	height: 100px;
+	width: 100%;
+	position: absolute;
+}
+
+#events .events-points a{
+	position: absolute;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+#events .events-points a:hover {
+	color: #F1D44B;
+	text-decoration: none;
 }
 
 /*
