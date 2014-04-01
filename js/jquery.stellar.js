@@ -97,23 +97,23 @@
 					// 'background-position-x': x,
 					// 'background-position-y': y
 				// });
-				$elem.stop().animate({
+				$elem.animate({
 					'background-position-x': x,
 					'background-position-y': y
 				}, {
 					queue : false,
-					duration : 500,
-					"easing" : "easeOutCubic"
+					duration : 300,
+					"easing" : "easeOutExpo"
 				});
 			} :
 			function($elem, x, y) {
 				//$elem.css('background-position', x + ' ' + y);
-				$elem.stop().animate({
+				$elem.animate({
 					backgroundPosition: "(" + x + " " + y +")"
 				}, {
 					queue : false,
-					duration : 500,
-					"easing" : "easeOutCubic"
+					duration : 300,
+					"easing" : "easeOutExpo"
 				});
 			}
 		),

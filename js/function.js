@@ -2,6 +2,85 @@ jQuery.noConflict();
 (function($) {
 	$(function() {
 		$(document).ready(function() {
+			
+			var eventsMap = [
+				{
+					top: 35,
+					year: "2014",
+					content: "2014 国际野生生物保护学会(WCS)中国委托公司网站开发事宜"
+				},
+				 {
+					top: 425,
+					year: "2013",
+					content: "2013 国际野生生物保护学会(WCS)中国委托公司网站开发事宜"
+				},	
+				 {
+					top: 745,
+					year: "2012",
+					content: "2012 国际野生生物保护学会(WCS)中国委托公司网站开发事宜"
+				},	
+				{
+					top: 1060,
+					year: "2011",
+					content: "2011 国际野生生物保护学会(WCS)中国委托公司网站开发事宜"
+				},
+				{
+					top: 1260,
+					year: "2010",
+					content: "2010 国际野生生物保护学会(WCS)中国委托公司网站开发事宜"
+				},		
+				{
+					top: 1465,
+					year: "2009",
+					content: "2009 国际野生生物保护学会(WCS)中国委托公司网站开发事宜"
+				},	
+			];
+			
+			var getEventByHeight  = function(height){
+				var result ;
+				$.each(eventsMap, function(index, data){
+					if(height > data.top) {
+						result = data;
+					} else {
+						return false;
+					}
+				});
+				return result;
+			}
+			$(window).on('scroll.events', function(){
+				var start = 3700;
+				var $this = $(this);
+				var $events = $('#events');
+				var $eventsTag = $events.find('.events-tag');
+				var currentScrollTop = $this.scrollTop();
+				var height = currentScrollTop-start;
+				if(height <= 400) {
+					$eventsTag.animate({
+						top : 550 - height
+					}, {
+						queue : false,
+						duration : 1000,
+						"easing" : "easeOutCubic"
+					});
+				}
+				if(currentScrollTop > start && currentScrollTop < start + 1642) {
+					$eventsTag.show();
+					$eventsTag.fadeIn(500);
+					
+					$events.find('.mask').height(height);
+					var eventObj = getEventByHeight(height);
+					if(eventObj) {
+						$events.find('.events-tag dt').html(eventObj.year);
+						$events.find('.events-tag .events-tag-body-middle').html(eventObj.content);
+					}
+				} else {
+					if(currentScrollTop < start) {
+						$events.find('.mask').height(0);
+					}
+					$eventsTag.fadeOut(500);
+				}
+			});
+		
 
 			$(".box").hover(function() {
 				$this = $(this);
@@ -63,12 +142,6 @@ jQuery.noConflict();
 				});
 			});
 
-			var windowWidth = $(window).width();
-			var mainWidth = 1440;
-			$("#particals_wrapper img").css('left', function() {
-				var offsetLeft = $(this).offset().left;
-				return (windowWidth - mainWidth) / 2 + offsetLeft;
-			});
 
 			$.stellar.positionProperty.position = {
 				setTop : function($element, newTop, originalTop) {
