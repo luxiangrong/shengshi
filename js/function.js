@@ -12,8 +12,6 @@ jQuery.noConflict();
 				var containerHeight = containerWidth / w_h_ratio / numPerRow;
 				$(".case-item ").height(containerHeight);
 				$(".case-item ").width(containerWidth/numPerRow);
-				console.log(containerWidth);
-				console.log();
 			}
 			calcCaseContainerHeight();
 			$(window).on("resize", calcCaseContainerHeight);
@@ -112,7 +110,8 @@ jQuery.noConflict();
 			});
 
 			//$('.case-list').scrollPlay();
-			$(".case-list .case-item").hover(function() {
+			$(".case-list .case-item").hover(function(e) {
+				e.stopPropagation();
 				$this = $(this);
 				var offset = $this.offset();
 				var height = $this.height() - 20;
@@ -138,7 +137,8 @@ jQuery.noConflict();
 					duration : 300,
 					"easing" : "easeOutCubic"
 				});
-			}, function() {
+			}, function(e) {
+				e.stopPropagation();
 				$this = $(this);
 				var offset = $this.offset();
 				var caseInfoPicElem = $this.find('.case-pic');
