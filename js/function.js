@@ -3,6 +3,22 @@ jQuery.noConflict();
 	$(function() {
 		$(document).ready(function() {
 			
+			
+			//案例展示部分自动计算长宽值
+			function calcCaseContainerHeight(){
+				var w_h_ratio = 320 / 213;
+				var numPerRow = 4;
+				var containerWidth = $("#case-container").width();
+				var containerHeight = containerWidth / w_h_ratio / numPerRow;
+				$(".case-item ").height(containerHeight);
+				$(".case-item ").width(containerWidth/numPerRow);
+				console.log(containerWidth);
+				console.log();
+			}
+			calcCaseContainerHeight();
+			$(window).on("resize", calcCaseContainerHeight);
+			
+			
 			var eventsMap = [
 				{
 					top: 35,
@@ -48,7 +64,7 @@ jQuery.noConflict();
 				return result;
 			}
 			$(window).on('scroll.events', function(){
-				var start = 3700;
+				var start = 3200;
 				var $this = $(this);
 				var $events = $('#events');
 				var $eventsTag = $events.find('.events-tag');

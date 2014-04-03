@@ -24,9 +24,12 @@
 		}
 		</style>
 		<![endif]-->
+		<!--[if lt IE 10]>
+		<script type="text/javascript" src="js/pie/PIE.js"></script>
+		<![endif]-->
 	</head>
 	<body>
-		<header class="navbar  navbar-fixed-top">
+		<div class="navbar  navbar-fixed-top">
 			<div class="header">
 				<div class="container">
 					<div class="navbar navbar-default navbar-static-top" role="navigation">
@@ -53,10 +56,9 @@
 					</div>
 				</div>
 			</div>
-		</header>
-
-		<section id="screen-1" class="section-1">
-			<div class="container screen-1-wrap" style="position: relative; height: 2500px;">
+		</div>
+		<div id="screen-1" class="section-1">
+			<div class="container screen-1-wrap" style="position: relative; height: 2000px;">
 				<img src="images/s1.png" data-stellar-ratio="0.3" style="position: fixed; top: 120px; left: 50%; margin-left: -332px"/>
 				<img src="images/scroll_iphone.png" data-stellar-ratio="0.4" style="position: fixed; top: 420px; left: 50%; margin-left: -392px"/>
 				<img src="images/scroll_ipad.png" data-stellar-ratio="0.4" style="position: fixed; top: 420px; left: 50%; margin-left: 172px"/>
@@ -70,41 +72,39 @@
 				<img data-stellar-ratio="5.36" alt="" style="margin-left: -480px; top: 800px;" src="images/scroll_005.png" />
 				<img data-stellar-ratio="1.62" alt="" style="margin-left: -690px; top: 1400px;"  src="images/scroll_006.png" />
 				<img data-stellar-ratio="3.14" alt=""  style="margin-left: 320px; top: 900px;" src="images/scroll_007.png" />
-				<div class="row text-center" style="width: 1280px; position: fixed; top: 800px;" data-stellar-ratio="0.3">
-
-					<div class="col-md-3 col-md-offset-2">
-						<div class="circle-btn">
+				<div class="row text-center" style="margin: 0 auto;width: 100%; position: fixed; left: 0; right: 0; top: 700px;" data-stellar-ratio="0.3">
+					<div class="col-md-4">
+						<div class="circle-btn" style="margin: 0 auto;">
 							<h1>14</h1>
 							<p>
 								<strong>14</strong>年经验
 							</p>
 						</div>
-						<div class="circle-btn-reflect gradient"></div>
+						<div class="circle-btn-reflect gradient" style="margin: 0 auto;"></div>
 					</div>
-					<div class="col-md-3 ">
-						<div class="circle-btn">
+					<div class="col-md-4">
+						<div class="circle-btn" style="margin: 0 auto;">
 							<h1>22</h1>
 							<p>
 								<strong>2</strong>步流程
 							</p>
 						</div>
-						<div class="circle-btn-reflect gradient"></div>
+						<div class="circle-btn-reflect gradient" style="margin: 0 auto;"></div>
 					</div>
-					<div class="col-md-2 ">
-						<div class="circle-btn ">
+					<div class="col-md-4 ">
+						<div class="circle-btn " style="margin: 0 auto;">
 							<h1>1000</h1>
 							<p>
 								<strong>1000</strong>次认可
 							</p>
 						</div>
-						<div class="circle-btn-reflect gradient"></div>
+						<div class="circle-btn-reflect gradient" style="margin: 0 auto;"></div>
 					</div>
 				</div>
 			</div>
-		</section>
-
+		</div>
 		<section id="screen-3" class="section-3 case-grid " >
-			<div class="container"  style="">
+			<div class="container" id="case-container" style="">
 				<div id="case1" class="case-list case-grid text-center row clearfix" >
 					<div class="case-item case-grid col-md-3">
 						<img class="case-pic img-responsive" src="images/case/case_01.png" />
@@ -314,7 +314,7 @@
 				<div class="scroll-2" data-stellar-background-ratio="2.5">
 					<div class="container">
 						<div class="row">
-							<div class="col-ld-12">
+							<div class="col-md-12">
 								<div class="view">
 									<div class="events-body">
 										<div class="mask">
@@ -352,10 +352,10 @@
 		<section id="screen-6" class="screen-6">
 			<div class="container">
 				<div class="row contact-info" style="padding: 50px;">
-					<div class="col-lg-5">
-						<img src="images/map.png" />
+					<div class="col-md-5">
+						<img src="images/map.png" class="img-responsive"/>
 					</div>
-					<div class="col-lg-3 ">
+					<div class="col-md-3 ">
 						<ul>
 							<li>
 								<dl>
@@ -400,7 +400,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-md-3">
 						<ul>
 							<li>
 								<dl>

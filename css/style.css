@@ -2,7 +2,7 @@
  * normal
  */
 body {
-	background-color: #181818;
+	background-color: #e4e5e7;
 }
 
 .header {
@@ -15,13 +15,12 @@ body {
 }
 
 @media (min-width: 1200px) {
-	.container {
+	/*.container {
 		width: 1280px;
-	}
+	}*/
 }
 
 .section-1, .section-2, .section-3, .section-4, .section5 {
-	background-color: #e4e5e7;
 	overflow-x: hidden;
 	padding-top: 20px;
 }
@@ -46,6 +45,7 @@ body {
 	width: 170px;
 	height: 170px;
 	cursor: pointer;
+	behavior: url(js/pie/PIE.htc);
 }
 
 .circle-btn-reflect {
@@ -89,14 +89,26 @@ body {
 	overflow: visible !important;
 }
 
+.case-grid  .container {
+	padding: 0;
+}
+
+.case-grid .row {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.case-grid .case-item {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+
 .case-list {
-	max-height: 240px;
 }
 
 .case-list .case-item {
 	position: relative;
-	max-width: 320px;
-	height: 213px;
 }
 
 .case-list .case-intro {
@@ -104,6 +116,7 @@ body {
 	color: #a8a8a8;
 	text-align: center;
 	opacity: 0;
+	filter:alpha(opacity=0)
 }
 
 .case-list  .case-pic, .case-list .case-intro {
@@ -339,11 +352,11 @@ body {
 }
 
 #events .scroll-1 {
-	background: url(../img/events/events_bg_1.png) 50% 0 repeat-y fixed;
+	background: url(../img/events/events_bg_1.png) center top repeat-y fixed;
 }
 
 #events .scroll-2 {
-	background: url(../img/events/events_bg_2.png) 50% 0 repeat-y fixed;
+	background: url(../img/events/events_bg_2.png) center top repeat-y fixed;
 }
 
 #events .events-body {
@@ -439,6 +452,7 @@ body {
 	height: 72px;
 	line-height: 72px;
 	-webkit-border-radius: 36px 36px 36px 36px;
+	 -moz-border-radius: 36px 36px 36px 36px;
 	border-radius: 36px 36px 36px 36px;
 	border: 0px solid #bdbdbd;
 	text-align: center;
@@ -446,6 +460,8 @@ body {
 	margin: 10px;
 	color: #999;
 	font-size: 24px;
+	position: relative;
+	behavior: url(js/pie/PIE.htc);
 }
 
 .contact-info .circle-btn:hover {
@@ -455,6 +471,9 @@ body {
 /*
  * footer
  */
+footer {
+	background-color: #181818;
+}
 .footer {
 	padding-top: 20px;
 }
