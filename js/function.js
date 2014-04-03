@@ -79,7 +79,7 @@ jQuery.noConflict();
 						"easing" : "easeOutCubic"
 					});
 				}
-				if(currentScrollTop > start && currentScrollTop < start + 1642) {
+				if(currentScrollTop > start && currentScrollTop < start + 1648) {
 					$eventsTag.show();
 					$eventsTag.fadeIn(500);
 					
@@ -93,8 +93,12 @@ jQuery.noConflict();
 					if(currentScrollTop < start) {
 						$events.find('.mask').height(0);
 					}
+					if(currentScrollTop > start + 1648) {
+						$events.find('.mask').height(1648);
+					}
 					$eventsTag.fadeOut(500);
 				}
+				
 			});
 		
 
