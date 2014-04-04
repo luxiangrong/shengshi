@@ -17,6 +17,7 @@ jQuery.noConflict();
 			$(window).on("resize", calcCaseContainerHeight);
 			
 			
+			//大事记内容和效果
 			var eventsMap = [
 				{
 					top: 35,
@@ -62,13 +63,13 @@ jQuery.noConflict();
 				return result;
 			}
 			$(window).on('scroll.events', function(){
-				var start = 3200;
+				var start = 3000;
 				var $this = $(this);
 				var $events = $('#events');
 				var $eventsTag = $events.find('.events-tag');
 				var currentScrollTop = $this.scrollTop();
 				var height = currentScrollTop-start;
-				if(height <= 400) {
+				if(height <= 500) {
 					$eventsTag.animate({
 						top : 550 - height
 					}, {
@@ -81,7 +82,13 @@ jQuery.noConflict();
 					$eventsTag.show();
 					$eventsTag.fadeIn(500);
 					
-					$events.find('.mask').height(height);
+					$events.find('.mask').animate({
+						height : height
+					}, {
+						queue : false,
+						duration : 500,
+						"easing" : "easeOutCubic"
+					});
 					var eventObj = getEventByHeight(height);
 					if(eventObj) {
 						$events.find('.events-tag dt').html(eventObj.year);
@@ -90,9 +97,22 @@ jQuery.noConflict();
 				} else {
 					if(currentScrollTop < start) {
 						$events.find('.mask').height(0);
+							$events.find('.mask').animate({
+							height : 0
+						}, {
+							queue : false,
+							duration : 500,
+							"easing" : "easeOutCubic"
+						});
 					}
 					if(currentScrollTop > start + 1648) {
-						$events.find('.mask').height(1648);
+						$events.find('.mask').animate({
+							height : 1648
+						}, {
+							queue : false,
+							duration : 500,
+							"easing" : "easeOutCubic"
+						});
 					}
 					$eventsTag.fadeOut(500);
 				}
@@ -100,6 +120,7 @@ jQuery.noConflict();
 			});
 		
 
+			//3d效果展示
 			$(".box").hover(function() {
 				$this = $(this);
 				var top = $this.find('.top');
@@ -109,7 +130,8 @@ jQuery.noConflict();
 				$this.removeClass('openBox');
 			});
 
-			//$('.case-list').scrollPlay();
+
+			//案例展示部分
 			$(".case-list .case-item").hover(function(e) {
 				e.stopPropagation();
 				$this = $(this);
@@ -163,6 +185,7 @@ jQuery.noConflict();
 			});
 
 
+			//视差桂东效果
 			$.stellar.positionProperty.position = {
 				setTop : function($element, newTop, originalTop) {
 					$element.animate({
@@ -181,7 +204,6 @@ jQuery.noConflict();
 
 			$.stellar({
 				horizontalScrolling : false, //默认水平方向开启滚动
-				horizontalOffset : 220,
 				hideDistantElements : false, //默认为隐藏
 			});
 		});

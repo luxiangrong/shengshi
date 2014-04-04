@@ -30,6 +30,7 @@
 		});
 	})(jQuery);
 
+	//not used
 	$.fn.scrollPlay = function(options) {
 		var opts = $.extend({}, $.fn.scrollPlay.defaults, options);
 		// iterate and reformat each matched element
