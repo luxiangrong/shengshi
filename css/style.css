@@ -170,16 +170,14 @@ body {
 	min-height: 400px;
 	margin-left: auto;
 	margin-right: auto;
-	-webkit-perspective: 900px;
-	-moz-perspective: 900px;
-	-ms-perspective: 900px;
-	-sand-perspective: 900px;
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	-ms-perspective: 800px;
 	perspective: 800px;
 	
 	-webkit-perspective-origin: 50% 20%;
 	-moz-perspective-origin: 50% 20%;
 	-ms-perspective-origin: 50% 20%;
-	-sand-perspective-origin: 50% 20%;
 	perspective-origin: 50% 20%;
 	position: relative;
 	
@@ -197,7 +195,6 @@ body {
 	-webkit-transform: rotateX(90deg) translate3d(0, 0, 50px);
 	-moz-transform: rotateX(90deg) translate3d(0, 0, 50px);
 	-ms-transform: rotateX(90deg) translate3d(0, 0, 50px);
-	-sand-transform: rotateX(90deg) translate3d(0, 0, 50px);
 	transform: rotateX(90deg) translate3d(0, 0, 50px);
 }
 
@@ -449,7 +446,12 @@ body {
 }
 
 .contact-info li {
-	padding: 35px 10px;
+	padding: 25px 5px;
+}
+
+.contact-info .col-sm-6 {
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .contact-info dt {
