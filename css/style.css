@@ -136,8 +136,8 @@ body {
 
 .case-list .case-item .case-intro {
 	background-color: #1d1d1d;
-	max-width: 360px;
-	padding: 30px 40px;
+	padding: 10px 30px;
+	width: 100%;
 }
 
 .case-list .case-item .case-intro h3 {
@@ -148,7 +148,7 @@ body {
 }
 
 .case-list .case-item  .case-intro img {
-	margin-top: -75px;
+	margin-top: -50px;
 }
 
 .case-list .case-item .case-intro p {
@@ -172,21 +172,32 @@ body {
 	margin-right: auto;
 	-webkit-perspective: 900px;
 	-moz-perspective: 900px;
+	-ms-perspective: 900px;
+	-sand-perspective: 900px;
 	perspective: 800px;
-	perspective-origin: 50% 20%;
+	
 	-webkit-perspective-origin: 50% 20%;
 	-moz-perspective-origin: 50% 20%;
+	-ms-perspective-origin: 50% 20%;
+	-sand-perspective-origin: 50% 20%;
+	perspective-origin: 50% 20%;
 	position: relative;
 	
 }
 
 .stage_area  .box-container {
+	position: relative;
+	
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-sand-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-	position: relative;
+	
 	-webkit-transform: rotateX(90deg) translate3d(0, 0, 50px);
 	-moz-transform: rotateX(90deg) translate3d(0, 0, 50px);
+	-ms-transform: rotateX(90deg) translate3d(0, 0, 50px);
+	-sand-transform: rotateX(90deg) translate3d(0, 0, 50px);
 	transform: rotateX(90deg) translate3d(0, 0, 50px);
 }
 
@@ -220,6 +231,7 @@ body {
 	height: 100px;
 	-webkit-transform: rotateX(-90deg) translate3d(0px, 350px, 150px);
 	-moz-transform: rotateX(-90deg) translate3d(0px, 350px, 150px);
+	-ms-transform: rotateX(-90deg) translate3d(0px, 350px, 150px);
 	transform: rotateX(-90deg) translate3d(0px, 350px, 150px);
 	opacity: 0;
 	transition: all 0.5s linear 0s;

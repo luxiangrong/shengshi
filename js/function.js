@@ -132,6 +132,57 @@ jQuery.noConflict();
 
 
 			//案例展示部分
+			// $(".case-list .case-item").on('mouseover.caseitem', function(e){
+				// $this = $(this);
+				// var offset = $this.offset();
+				// var height = $this.height() - 20;
+				// // $this.find('.case-pic').css('visibility','hidden');
+				// var caseInfoPicElem = $this.find('.case-pic');
+				// var caseIntroElem = $this.find('.case-intro');
+				// //将详细介绍定位到原来位置
+				// caseInfoPicElem.css('top', 0).css('left', 0);
+				// caseIntroElem.css('top', 0).css('left', 0).css('opacity', 0);
+// 
+				// caseInfoPicElem.stop(true, true).animate({
+					// top : -1 * height / 2
+				// }, {
+					// queue : false,
+					// duration : 500,
+					// "easing" : "easeOutCubic"
+				// });
+				// caseIntroElem.stop(true, true).animate({
+					// top : height / 2,
+					// opacity : 1
+				// }, {
+					// queue : false,
+					// duration : 300,
+					// "easing" : "easeOutCubic"
+				// });
+// 				
+			// });
+			// $(".case-list .case-item").on('mouseout.caseitem', function(e){
+				// $this = $(this);
+				// var offset = $this.offset();
+				// var caseInfoPicElem = $this.find('.case-pic');
+				// var caseIntroElem = $this.find('.case-intro');
+				// //将详细介绍定位到原来位置
+// 
+				// caseInfoPicElem.stop(true, false).animate({
+					// top : 0
+				// }, {
+					// queue : false,
+					// duration : 500,
+					// "easing" : "easeOutCubic"
+				// });
+				// caseIntroElem.stop(true, false).animate({
+					// top : 0,
+					// opacity : 0
+				// }, {
+					// queue : false,
+					// duration : 300,
+					// "easing" : "easeOutCubic"
+				// });
+			// });
 			$(".case-list .case-item").hover(function(e) {
 				e.stopPropagation();
 				$this = $(this);
@@ -142,7 +193,8 @@ jQuery.noConflict();
 				var caseIntroElem = $this.find('.case-intro');
 				//将详细介绍定位到原来位置
 				caseInfoPicElem.css('top', 0).css('left', 0);
-				caseIntroElem.css('top', 0).css('left', 0).css('opacity', 0);
+				caseIntroElem.css('top', 0).css('left', 0);
+				$this.css('z-index', 1000);
 
 				caseInfoPicElem.stop(true, true).animate({
 					top : -1 * height / 2
@@ -166,6 +218,7 @@ jQuery.noConflict();
 				var caseInfoPicElem = $this.find('.case-pic');
 				var caseIntroElem = $this.find('.case-intro');
 				//将详细介绍定位到原来位置
+				$this.css('z-index', 100);
 
 				caseInfoPicElem.stop(true, false).animate({
 					top : 0
