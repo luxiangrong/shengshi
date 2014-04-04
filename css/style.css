@@ -429,9 +429,12 @@ body {
 }
 
 #events .events-tag  .events-tag-body-middle {
+	position: relative;
 	background: #dddddd ;
 	padding: 10px 50px 70px 60px;
 	margin-left: 250px;
+	box-shadow: 4px 4px 4px -1px rgba(0,0,0,0.35);
+	behavior: url(js/pie/PIE.htc);
 }
 
 /*===============screen 6===============*/

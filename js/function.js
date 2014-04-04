@@ -64,7 +64,6 @@ jQuery.noConflict();
 			}
 			$(window).on('scroll.events', function(){
 				var start = $('#screen-1').height() + $("#screen-3").height() + 500;
-				console.log(start);
 				var $this = $(this);
 				var $events = $('#events');
 				var $eventsTag = $events.find('.events-tag');

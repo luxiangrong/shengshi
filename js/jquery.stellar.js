@@ -102,7 +102,7 @@
 					'background-position-y': y
 				}, {
 					queue : false,
-					duration : 300,
+					duration : 800,
 					"easing" : "easeOutExpo"
 				});
 			} :
@@ -112,7 +112,7 @@
 					backgroundPosition: "(" + x + " " + y +")"
 				}, {
 					queue : false,
-					duration : 300,
+					duration : 800,
 					"easing" : "easeOutExpo"
 				});
 			}
