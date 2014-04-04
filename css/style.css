@@ -20,6 +20,7 @@ body {
 	}*/
 }
 
+
 .section-1, .section-2, .section-3, .section-4, .section5 {
 	overflow-x: hidden;
 	padding-top: 20px;
@@ -351,7 +352,12 @@ body {
 	padding-top: 50px;
 }
 
+#events .container{
+	width: 1280px;
+}
+
 #events .scroll-1 {
+	overflow-x: hidden;
 	background: url(../img/events/events_bg_1.png) center top repeat-y fixed;
 }
 
@@ -481,6 +487,8 @@ footer {
 .site-map {
 	margin-left: 10px;
 	margin-right: 20px;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .site-map .list-group-item {
@@ -501,6 +509,10 @@ footer {
 	background-image: none;
 	color: #ff1100;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
+}
+
+.qr .col-sm-4 {
+	padding: 0;
 }
 
 .qr-box {
