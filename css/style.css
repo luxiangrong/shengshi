@@ -104,6 +104,9 @@ body {
 	padding: 0 !important;
 }
 
+#case-container {
+}
+
 
 .case-list {
 }
@@ -258,8 +261,9 @@ body {
 	-moz-transform: translate3d(0px, 0px, -400px) rotateY(0) rotateZ(0) scale(0.1);
 	transform: translate3d(0px, 0px, -400px) rotateY(0) rotateZ(0) scale(0.1);
 	opacity: 0;
-	max-width: 200px;
-	max-height: 200px;
+    background-color: transparent;
+    height: auto;
+    max-width: 100%;
 }
 
 .box-container .openBox .top {
@@ -272,26 +276,16 @@ body {
 
 .box-container .openBox .things {
 	opacity: 1;
-	max-width: 200px;
-	max-height: 200px;
+	-webkit-transform: translate3d(0px, 0px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-90deg) scale(0.5);
+	-moz-transform: translate3d(0px, 0px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-90deg) scale(0.5);
+	transform: translate3d(0px, 0px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-90deg) scale(0.5);
 }
 
-.box-container .openBox .thing1 {
-	-webkit-transform: translate3d(-30px, -20px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-45deg) scale(0.4);
-	-moz-transform: translate3d(-30px, -20px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-45deg) scale(0.4);
-	transform: translate3d(-30px, -20px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-45deg) scale(0.4);
-}
-
-.box-container .openBox .thing2 {
-	-webkit-transform: translate3d(0px, 0px, -240px) rotateY(0deg) rotateZ(0deg) rotateX(-45deg) scale(0.4);
-	-moz-transform: translate3d(0px, 0px, -240px) rotateY(0deg) rotateZ(0deg) rotateX(-45deg) scale(0.4);
-	transform: translate3d(0px, 0px, -240px) rotateY(0deg) rotateZ(0deg) rotateX(-45deg) scale(0.4);
-}
-
-.box-container .openBox .thing3 {
-	-webkit-transform: translate3d(30px, 20px, -230px) rotateY(0deg) rotateZ(0deg) rotateX(-45deg) scale(0.4);
-	-moz-transform: translate3d(30px, 20px, -230px) rotateY(0deg) rotateZ(0deg) rotateX(-45deg) scale(0.4);
-	transform: translate3d(30px, 20px, -230px) rotateY(0deg) rotateZ(0deg) rotateX(-45deg) scale(0.4);
+.box-container .openBox.box-row-1 .things,
+.box-container .openBox.box-row-1 .things {
+	-webkit-transform: translate3d(0px, 0px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-90deg) scale(0.4);
+	-moz-transform: translate3d(0px, 0px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-90deg) scale(0.4);
+	transform: translate3d(0px, 0px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-90deg) scale(0.4);
 }
 
 .box-container .openBox .front,.box-container .openBox .left,.box-container .openBox .right {
@@ -323,6 +317,9 @@ body {
 	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 ); /* IE6-8 */
+	
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	
 	-webkit-transform: rotateX(-90deg) translate3d(50px, 355px, 20px);
 	-moz-transform: rotateX(-90deg) translate3d(50px, 355px, 0px);
