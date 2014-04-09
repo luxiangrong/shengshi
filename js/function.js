@@ -183,9 +183,6 @@ jQuery.noConflict();
 				
 				var containerWidth = $("#case-container").width();
 				
-				console.log($(".container").width());
-				console.log($(window).width());
-				
 				var containerHeight = (containerWidth / w_h_ratio / numPerRow);
 				$(".case-item ").height(containerHeight);
 				$(".case-item ").width((containerWidth/numPerRow));
