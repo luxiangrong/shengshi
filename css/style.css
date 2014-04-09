@@ -20,10 +20,14 @@ body {
 	}*/
 }
 
+.parallax-view {
+	position: fixed; 
+	left: 0; 
+	right: 0; 
+}
 
 .section-1, .section-2, .section-3, .section-4, .section5 {
 	overflow-x: hidden;
-	padding-top: 20px;
 }
 
 /*============ screen 1 ===============*/
@@ -104,7 +108,18 @@ body {
 	padding: 0 !important;
 }
 
-#case-container {
+.case-header{
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+	
+	width: 100%; height: 50px;
 }
 
 
@@ -162,7 +177,7 @@ body {
 .section-4 {
 	overflow-x: hidden;
 	overflow-y:visible;
-	height: 800px;
+	height: 1000px;
 	padding-top: 150px;
 	background:  url(../img/computer.png) center top no-repeat;
 	background-color: #fbfbfb;
@@ -184,6 +199,9 @@ body {
 	perspective-origin: 50% 20%;
 	position: relative;
 	
+}
+
+.box-container .box {
 }
 
 .stage_area  .box-container {
@@ -283,9 +301,9 @@ body {
 
 .box-container .openBox.box-row-1 .things,
 .box-container .openBox.box-row-1 .things {
-	-webkit-transform: translate3d(0px, 0px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-90deg) scale(0.4);
-	-moz-transform: translate3d(0px, 0px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-90deg) scale(0.4);
-	transform: translate3d(0px, 0px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-90deg) scale(0.4);
+	-webkit-transform: translate3d(0px, 0px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-90deg) scale(0.32);
+	-moz-transform: translate3d(0px, 0px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-90deg) scale(0.32);
+	transform: translate3d(0px, 0px, -250px) rotateY(0deg) rotateZ(0deg) rotateX(-90deg) scale(0.32);
 }
 
 .box-container .openBox .front,.box-container .openBox .left,.box-container .openBox .right {
@@ -318,10 +336,8 @@ body {
 	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 ); /* IE6-8 */
 	
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 	
-	-webkit-transform: rotateX(-90deg) translate3d(50px, 355px, 20px);
+	-webkit-transform: rotateX(-90deg) translate3d(50px, 355px, 0px);
 	-moz-transform: rotateX(-90deg) translate3d(50px, 355px, 0px);
 	transform: rotateX(-90deg) translate3d(50px, 355px, 0px);
 	-webkit-border-radius: 70px 70px 70px 70px;
@@ -338,6 +354,7 @@ body {
 	transition: all 0.5s linear 0s;
 	color: #dd0313;
 	text-align: center;
+	font-size: 16px;
 }
 
 .box-container .box-label  p {
@@ -345,9 +362,9 @@ body {
 }
 
 .box-container .openBox .box-label {
-	-webkit-transform: rotateX(-90deg) translate3d(50px, 160px, 0px);
-	-moz-transform: rotateX(-90deg) translate3d(50px, 160px, 0px);
-	transform: rotateX(-90deg) translate3d(50px, 160px, 0px);
+	-webkit-transform: rotateX(-90deg) translate3d(50px, 180px, 0px);
+	-moz-transform: rotateX(-90deg) translate3d(50px, 180px, 0px);
+	transform: rotateX(-90deg) translate3d(50px, 180px, 0px);
 	opacity: 1;
 	background-color: #FFF;
 }
@@ -355,7 +372,6 @@ body {
 /*============= screen events ==============*/
 #events {
 	background-color: #FFF;
-	padding-top: 50px;
 }
 
 #events .container{
@@ -364,11 +380,11 @@ body {
 
 #events .scroll-1 {
 	overflow-x: hidden;
-	background: url(../img/events/events_bg_1.png) center top repeat-y fixed;
+	background: url(../img/events/events_bg_1.png) center top repeat-y ;
 }
 
 #events .scroll-2 {
-	background: url(../img/events/events_bg_2.png) center top repeat-y fixed;
+	background: url(../img/events/events_bg_2.png) center top repeat-y ;
 }
 
 #events .events-body {

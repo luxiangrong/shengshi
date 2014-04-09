@@ -188,7 +188,7 @@ jQuery.noConflict();
 				$(".case-item ").width((containerWidth/numPerRow));
 			}
 			calcCaseContainerHeight();
-			$(window).on("resize", calcCaseContainerHeight);
+			//$(window).on("resize", calcCaseContainerHeight);
 
 			//视差滚动效果
 			$.stellar.positionProperty.position = {
@@ -206,7 +206,20 @@ jQuery.noConflict();
 					$elem.css('left', left);
 				},
 			};
-
+			
+			var screen1Height = $("#screen-1").height();
+			var screen3Height = $("#screen-3").height();
+			var screen4Height = $("#screen-4").height() ;
+			var screen5Height = $("#events").height();
+			var screen6Height = $("#screen-6").height();
+			var screen7Height = $("#screen-7").height();
+			
+			$("#screen-3").attr("data-stellar-vertical-offset", -screen1Height);
+			$("#screen-4").attr("data-stellar-vertical-offset", -screen1Height - screen3Height);
+			$("#events").attr("data-stellar-vertical-offset", -screen1Height - screen3Height - screen4Height);
+			$("#screen-6").attr("data-stellar-vertical-offset", -screen1Height - screen3Height - screen4Height - screen5Height );
+			$("#screen-7").attr("data-stellar-vertical-offset", -screen1Height - screen3Height - screen4Height - screen5Height - screen6Height);
+			$("body").height(screen1Height + screen3Height + screen4Height + screen5Height + screen6Height + screen7Height);
 			$.stellar({
 				horizontalScrolling : false, //默认水平方向开启滚动
 				hideDistantElements : false, //默认为隐藏
