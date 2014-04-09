@@ -196,14 +196,14 @@ jQuery.noConflict();
 			//视差滚动效果
 			$.stellar.positionProperty.position = {
 				setTop : function($element, newTop, originalTop) {
-					$element.animate({
+					$element.stop(true).animate({
 						top : newTop
 					}, {
 						queue : false,
 						duration : 1000,
 						"easing" : "easeOutCubic"
 					});
-					// $element.css('top', newTop);
+					//$element.css('top', newTop);
 				},
 				setLeft : function($element, newLeft, originalLeft) {
 					$elem.css('left', left);
