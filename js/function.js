@@ -188,7 +188,7 @@ jQuery.noConflict();
 				$(".case-item ").width((containerWidth/numPerRow));
 			}
 			calcCaseContainerHeight();
-			//$(window).on("resize", calcCaseContainerHeight);
+			$(window).on("resize", calcCaseContainerHeight);
 
 			//视差滚动效果
 			$.stellar.positionProperty.position = {
